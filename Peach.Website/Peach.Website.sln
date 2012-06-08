@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peach.Website.Host", "Peach.Website.Host\Peach.Website.Host.csproj", "{9186A7E7-3241-473E-920A-84E2731072FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Base", "Base", "{9B388232-F73C-4ED5-9147-67186D83C79C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xyperico.Base", "..\..\Xyperico.Base\Xyperico.Base\Xyperico.Base.csproj", "{054A30BA-B232-4FF1-9F23-1040D075764A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xyperico.Web.Mvc", "..\..\Xyperico.Web\Xyperico.Web.Mvc\Xyperico.Web.Mvc\Xyperico.Web.Mvc.csproj", "{5BAC1705-410B-4B27-AA97-03C1EF567E1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCRAP", "SCRAP\SCRAP.csproj", "{23A32801-D4A3-49D1-ABC4-378AB6DCFFE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peach.Website.Core", "Peach.Website.Core\Peach.Website.Core.csproj", "{AA51967A-E052-4CFC-AAFC-B296EFF9A610}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9186A7E7-3241-473E-920A-84E2731072FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9186A7E7-3241-473E-920A-84E2731072FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9186A7E7-3241-473E-920A-84E2731072FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9186A7E7-3241-473E-920A-84E2731072FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{054A30BA-B232-4FF1-9F23-1040D075764A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{054A30BA-B232-4FF1-9F23-1040D075764A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{054A30BA-B232-4FF1-9F23-1040D075764A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{054A30BA-B232-4FF1-9F23-1040D075764A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BAC1705-410B-4B27-AA97-03C1EF567E1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BAC1705-410B-4B27-AA97-03C1EF567E1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BAC1705-410B-4B27-AA97-03C1EF567E1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BAC1705-410B-4B27-AA97-03C1EF567E1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23A32801-D4A3-49D1-ABC4-378AB6DCFFE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23A32801-D4A3-49D1-ABC4-378AB6DCFFE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23A32801-D4A3-49D1-ABC4-378AB6DCFFE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23A32801-D4A3-49D1-ABC4-378AB6DCFFE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA51967A-E052-4CFC-AAFC-B296EFF9A610}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA51967A-E052-4CFC-AAFC-B296EFF9A610}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA51967A-E052-4CFC-AAFC-B296EFF9A610}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA51967A-E052-4CFC-AAFC-B296EFF9A610}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{054A30BA-B232-4FF1-9F23-1040D075764A} = {9B388232-F73C-4ED5-9147-67186D83C79C}
+		{5BAC1705-410B-4B27-AA97-03C1EF567E1A} = {9B388232-F73C-4ED5-9147-67186D83C79C}
+	EndGlobalSection
+EndGlobal
