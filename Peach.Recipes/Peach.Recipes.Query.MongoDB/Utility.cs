@@ -1,6 +1,7 @@
 ﻿using Peach.Recipes.Query.MongoDB.Recipes;
 using Peach.Recipes.Query.Recipes;
 using Xyperico.Base;
+using Norm.Configuration;
 
 
 namespace Peach.Recipes.Query.MongoDB
@@ -11,6 +12,14 @@ namespace Peach.Recipes.Query.MongoDB
     {
       Xyperico.Base.MongoDB.BsonTypeConverters.Utility.RegisterAllConverters();
       ConfigureDependencies(container);
+
+      MongoConfiguration.Initialize(config =>
+      {
+        config.For<Recipe>(cfg =>
+        {
+          cfg.ForProperty(r => r.Ingredients).Ignore();
+        });
+      });
     }
 
 

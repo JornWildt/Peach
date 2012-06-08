@@ -15,9 +15,9 @@ namespace Peach.Recipes.Query.Tests.Recipes
 
     #region IRecipeBuilder Members
 
-    public Recipe Build()
+    public Recipe Build(string key)
     {
-      Recipe r = new Recipe();
+      Recipe r = new Recipe(key, "Pancakes", "Wonderful");
       RecipeRepository.Add(r);
       RegisterInstance(r);
       return r;

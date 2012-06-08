@@ -18,5 +18,10 @@ namespace Peach.Website.Core
       //RouteConfig.RegisterRoutes(RouteTable.Routes);
       BundleConfig.RegisterBundles(BundleTable.Bundles);
     }
+
+
+    protected override void RegisterRoutesBeforeAreas(System.Web.Routing.RouteCollection routes)
+    {
+    }
   }
 }

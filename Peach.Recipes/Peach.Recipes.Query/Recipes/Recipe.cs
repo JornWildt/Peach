@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Xyperico.Base;
 using CuttingEdge.Conditions;
+using Xyperico.Base;
 
 
 namespace Peach.Recipes.Query.Recipes
@@ -11,6 +11,8 @@ namespace Peach.Recipes.Query.Recipes
     #region Public persisted properties
 
     public Guid Id { get; protected set; }
+
+    public string Key { get; protected set; }
 
     public string Title { get; protected set; }
 
@@ -33,12 +35,16 @@ namespace Peach.Recipes.Query.Recipes
     }
 
 
-    public Recipe(string title, string description)
-      : this()
+    public Recipe(string key, string title, string description)
     {
+      Condition.Requires(key, "key").IsNotNullOrEmpty();
       Condition.Requires(title, "title").IsNotNullOrEmpty();
       Condition.Requires(description, "description").IsNotNull();
 
+      Id = Guid.NewGuid();
+      IngredientList = new List<IngredientLine>();
+
+      Key = key;
       Title = title;
       Description = description;
     }

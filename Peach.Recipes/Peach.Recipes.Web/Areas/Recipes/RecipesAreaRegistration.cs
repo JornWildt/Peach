@@ -22,12 +22,12 @@ namespace Peach.Recipes.Web.Areas.Recipes
 
     public override void RegisterArea(AreaRegistrationContext context)
     {
-      Logger.Debug("Register recipes area");
+      Logger.Debug("Register Recipes area");
 
       context.MapRoute(
         "Recipes_Default",
-        "app/recipes/{controller}/{id}/{action}",
-        new { action = "show" },
+        "recipes/{id}/{action}/{controller}",
+        new { action = "show", controller = "default" },
         new string[] { "Peach.Recipes.Web.Areas.Recipes.*" });
     }
   }

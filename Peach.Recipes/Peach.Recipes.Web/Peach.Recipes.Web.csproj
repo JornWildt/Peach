@@ -48,22 +48,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Areas\Recipes\Controllers\recipeController.cs" />
+    <Compile Include="Areas\Recipes\Controllers\defaultController.cs" />
+    <Compile Include="Areas\Recipes\Models\RecipeViewModel.cs" />
     <Compile Include="Areas\Recipes\RecipesAreaRegistration.cs" />
+    <Compile Include="Areas\Startup\StartupAreaRegistration.cs" />
     <Compile Include="Controller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Areas\Recipes\Views\recipe\show.cshtml" />
+    <None Include="Areas\Recipes\Views\default\show.cshtml" />
     <None Include="Areas\Recipes\Views\Web.config" />
     <None Include="copyfiles.bat" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Xyperico\Source\Xyperico.Base\Xyperico.Base\Xyperico.Base.csproj">
+      <Project>{054A30BA-B232-4FF1-9F23-1040D075764A}</Project>
+      <Name>Xyperico.Base</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Xyperico\Source\Xyperico.Web\Xyperico.Web.Mvc\Xyperico.Web.Mvc\Xyperico.Web.Mvc.csproj">
       <Project>{5BAC1705-410B-4B27-AA97-03C1EF567E1A}</Project>
       <Name>Xyperico.Web.Mvc</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Peach.Recipes.Query.MongoDB\Peach.Recipes.Query.MongoDB.csproj">
+      <Project>{D7ECB7B6-6D23-4D52-8430-11F0B34B4CB2}</Project>
+      <Name>Peach.Recipes.Query.MongoDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Peach.Recipes.Query\Peach.Recipes.Query.csproj">
+      <Project>{55A48DE0-3FB2-4CE0-873A-554DFE1B48B9}</Project>
+      <Name>Peach.Recipes.Query</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>cd $(ProjectDir)
