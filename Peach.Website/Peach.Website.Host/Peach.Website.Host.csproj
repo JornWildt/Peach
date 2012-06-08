@@ -35,16 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Castle.Core">
-      <HintPath>..\..\..\..\Libraries\Castle\Castle.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Castle.Windsor">
-      <HintPath>..\..\..\..\Libraries\Castle\Castle.Windsor.dll</HintPath>
-    </Reference>
-    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Libraries\log4net.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Web.Optimization">
       <HintPath>..\packages\Microsoft.Web.Optimization.0.1\lib\net40\Microsoft.Web.Optimization.dll</HintPath>
@@ -201,7 +191,11 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Xyperico.Web\Xyperico.Web.Mvc\Xyperico.Web.Mvc\Xyperico.Web.Mvc.csproj">
+    <ProjectReference Include="..\..\..\Xyperico\Source\Xyperico.Base\Xyperico.Base\Xyperico.Base.csproj">
+      <Project>{054A30BA-B232-4FF1-9F23-1040D075764A}</Project>
+      <Name>Xyperico.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Xyperico\Source\Xyperico.Web\Xyperico.Web.Mvc\Xyperico.Web.Mvc\Xyperico.Web.Mvc.csproj">
       <Project>{5BAC1705-410B-4B27-AA97-03C1EF567E1A}</Project>
       <Name>Xyperico.Web.Mvc</Name>
     </ProjectReference>

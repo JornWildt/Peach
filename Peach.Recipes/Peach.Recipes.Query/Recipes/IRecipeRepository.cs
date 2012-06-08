@@ -7,5 +7,6 @@ namespace Peach.Recipes.Query.Recipes
   {
     void Add(Recipe r);
     void Delete(Guid id);
+    void DeleteAll();
   }
 }

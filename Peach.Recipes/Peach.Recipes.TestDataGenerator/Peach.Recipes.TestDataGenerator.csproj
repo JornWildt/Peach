@@ -2,18 +2,21 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{5C13CA3B-5BC6-4C1E-87F8-335AD1D68226}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{56814343-C664-4EE3-B9CF-870941373E39}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Peach.Recipes.Web</RootNamespace>
-    <AssemblyName>Peach.Recipes.Web</AssemblyName>
+    <RootNamespace>Peach.Recipes.TestDataGenerator</RootNamespace>
+    <AssemblyName>Peach.Recipes.TestDataGenerator</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +26,8 @@
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,15 +36,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Xyperico\Libraries\log4net.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Web" />
-    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,28 +45,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Areas\Recipes\Controllers\recipeController.cs" />
-    <Compile Include="Areas\Recipes\RecipesAreaRegistration.cs" />
-    <Compile Include="Controller.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Areas\Recipes\Views\recipe\show.cshtml" />
-    <None Include="Areas\Recipes\Views\Web.config" />
-    <None Include="copyfiles.bat" />
+    <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Xyperico\Source\Xyperico.Web\Xyperico.Web.Mvc\Xyperico.Web.Mvc\Xyperico.Web.Mvc.csproj">
-      <Project>{5BAC1705-410B-4B27-AA97-03C1EF567E1A}</Project>
-      <Name>Xyperico.Web.Mvc</Name>
+    <ProjectReference Include="..\..\..\Xyperico\Source\Xyperico.Base\Xyperico.Base.MongoDB\Xyperico.Base.MongoDB\Xyperico.Base.MongoDB.csproj">
+      <Project>{DF1A3B54-FD53-414F-8C54-0D9F6EDEB2C9}</Project>
+      <Name>Xyperico.Base.MongoDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Xyperico\Source\Xyperico.Base\Xyperico.Base\Xyperico.Base.csproj">
+      <Project>{054A30BA-B232-4FF1-9F23-1040D075764A}</Project>
+      <Name>Xyperico.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Peach.Recipes.Query.MongoDB\Peach.Recipes.Query.MongoDB.csproj">
+      <Project>{D7ECB7B6-6D23-4D52-8430-11F0B34B4CB2}</Project>
+      <Name>Peach.Recipes.Query.MongoDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Peach.Recipes.Query\Peach.Recipes.Query.csproj">
+      <Project>{55A48DE0-3FB2-4CE0-873A-554DFE1B48B9}</Project>
+      <Name>Peach.Recipes.Query</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Peach.Recipes.TestDataGenerator.Shared\Peach.Recipes.TestDataGenerator.Shared.csproj">
+      <Project>{4DA274CE-4008-42BD-AE5F-8EE3F575BE69}</Project>
+      <Name>Peach.Recipes.TestDataGenerator.Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>cd $(ProjectDir)
-copyfiles.bat
-</PostBuildEvent>
-  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

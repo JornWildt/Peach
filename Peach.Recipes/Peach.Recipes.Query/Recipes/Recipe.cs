@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Xyperico.Base;
+using CuttingEdge.Conditions;
 
 
 namespace Peach.Recipes.Query.Recipes
@@ -29,6 +30,17 @@ namespace Peach.Recipes.Query.Recipes
     {
       Id = Guid.NewGuid();
       IngredientList = new List<IngredientLine>();
+    }
+
+
+    public Recipe(string title, string description)
+      : this()
+    {
+      Condition.Requires(title, "title").IsNotNullOrEmpty();
+      Condition.Requires(description, "description").IsNotNull();
+
+      Title = title;
+      Description = description;
     }
   }
 }

@@ -21,6 +21,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CuttingEdge.Conditions, Version=1.1.0.10041, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Xyperico\Libraries\CuttingEdge.Conditions.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,7 +53,7 @@
     <Compile Include="Recipes\Recipe.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Xyperico.Base\Xyperico.Base\Xyperico.Base.csproj">
+    <ProjectReference Include="..\..\..\Xyperico\Source\Xyperico.Base\Xyperico.Base\Xyperico.Base.csproj">
       <Project>{054A30BA-B232-4FF1-9F23-1040D075764A}</Project>
       <Name>Xyperico.Base</Name>
     </ProjectReference>

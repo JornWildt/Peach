@@ -32,7 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="log4net">
-      <HintPath>..\..\..\..\Libraries\log4net.dll</HintPath>
+      <HintPath>..\..\..\Xyperico\Libraries\log4net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -56,11 +56,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Xyperico.Base\Xyperico.Base\Xyperico.Base.csproj">
+    <ProjectReference Include="..\..\..\Xyperico\Source\Xyperico.Base\Xyperico.Base\Xyperico.Base.csproj">
       <Project>{054A30BA-B232-4FF1-9F23-1040D075764A}</Project>
       <Name>Xyperico.Base</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Xyperico.Web\Xyperico.Web.Mvc\Xyperico.Web.Mvc\Xyperico.Web.Mvc.csproj">
+    <ProjectReference Include="..\..\..\Xyperico\Source\Xyperico.Web\Xyperico.Web.Mvc\Xyperico.Web.Mvc\Xyperico.Web.Mvc.csproj">
       <Project>{5BAC1705-410B-4B27-AA97-03C1EF567E1A}</Project>
       <Name>Xyperico.Web.Mvc</Name>
     </ProjectReference>

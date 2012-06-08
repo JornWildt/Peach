@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -47,11 +48,11 @@
     <Compile Include="Utility.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Xyperico.Base\Xyperico.Base.MongoDB\Xyperico.Base.MongoDB\Xyperico.Base.MongoDB.csproj">
+    <ProjectReference Include="..\..\..\Xyperico\Source\Xyperico.Base\Xyperico.Base.MongoDB\Xyperico.Base.MongoDB\Xyperico.Base.MongoDB.csproj">
       <Project>{DF1A3B54-FD53-414F-8C54-0D9F6EDEB2C9}</Project>
       <Name>Xyperico.Base.MongoDB</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Xyperico.Base\Xyperico.Base\Xyperico.Base.csproj">
+    <ProjectReference Include="..\..\..\Xyperico\Source\Xyperico.Base\Xyperico.Base\Xyperico.Base.csproj">
       <Project>{054A30BA-B232-4FF1-9F23-1040D075764A}</Project>
       <Name>Xyperico.Base</Name>
     </ProjectReference>
