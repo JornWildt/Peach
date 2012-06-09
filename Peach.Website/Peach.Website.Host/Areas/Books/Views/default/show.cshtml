@@ -8,9 +8,9 @@
 <h2>Opskrifter</h2>
 
 <ol>
-@foreach (var recipeId in Model.Book.RecipeIds)
+@foreach (var recipe in Model.Recipes)
 {
-  <li>@recipeId</li>
+  <li>@recipe.Title</li>
 }
 </ol>
 

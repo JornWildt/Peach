@@ -1,26 +1,27 @@
-﻿using System.Web.Mvc;
+﻿using System.Linq;
+using System.Web.Mvc;
 using Peach.Recipes.Query.Books;
 using Peach.Recipes.Web.Areas.Books.Models;
+using Peach.Recipes.Query.Recipes;
+using System.Collections.Generic;
 
 
 namespace Peach.Recipes.Web.Areas.Books.Controllers
 {
   public class defaultController : Controller
   {
-    #region Dependencies
-
-    public IBookProvider BookProvider { get; set; }
-
-    #endregion
 
 
     [HttpGet]
     public ActionResult show(string id) // id = key!
     {
-      Book r = BookProvider.GetByKey(id);
+      Book b = BookProvider.GetByKey(id);
+      IList<Recipe> recipes = RecipeProvider.Get(b.RecipeIds).ToList();
+
       BookViewModel result = new BookViewModel
       {
-        Book = r
+        Book = b,
+        Recipes = recipes
       };
       return View(result);
     }

@@ -7,13 +7,6 @@ namespace Peach.Recipes.Web.Areas.Recipes.Controllers
 {
   public class defaultController : Controller
   {
-    #region Dependencies
-
-    public IRecipeProvider RecipeProvider { get; set; }
-
-    #endregion
-
-
     [HttpGet]
     public ActionResult show(string id) // id = key!
     {
