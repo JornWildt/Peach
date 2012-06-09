@@ -22,7 +22,7 @@ namespace Peach.Recipes.TestDataGenerator
 
     static void Configure()
     {
-      Xyperico.Base.MongoDB.BsonTypeConverters.Utility.RegisterAllConverters();
+      Xyperico.Base.MongoDB.Utility.Initialize();
       Peach.Recipes.Query.MongoDB.Utility.Initialize(Xyperico.Base.ObjectContainer.Container);
       ConfigureContainer(Xyperico.Base.ObjectContainer.Container);
       Builder = Xyperico.Base.ObjectContainer.Container.Instantiate<TestDataBuilder>();

@@ -1,4 +1,4 @@
-﻿using Norm.Configuration;
+﻿using MongoDB.Bson.Serialization;
 using Peach.Recipes.Query.Books;
 using Peach.Recipes.Query.MongoDB.Books;
 using Peach.Recipes.Query.MongoDB.Recipes;
@@ -12,21 +12,8 @@ namespace Peach.Recipes.Query.MongoDB
   {
     public static void Initialize(IObjectContainer container)
     {
-      Xyperico.Base.MongoDB.BsonTypeConverters.Utility.RegisterAllConverters();
+      Xyperico.Base.MongoDB.Utility.Initialize();
       ConfigureDependencies(container);
-
-      MongoConfiguration.Initialize(config =>
-      {
-        config.For<Recipe>(cfg =>
-        {
-          cfg.ForProperty(r => r.Ingredients).Ignore();
-        });
-
-        config.For<Book>(cfg =>
-        {
-          cfg.ForProperty(r => r.RecipeIds).Ignore();
-        });
-      });
     }
 
 
