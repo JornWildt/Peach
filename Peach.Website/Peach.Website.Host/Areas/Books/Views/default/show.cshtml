@@ -1,0 +1,16 @@
+﻿@model Peach.Recipes.Web.Areas.Books.Models.BookViewModel
+@{
+  ViewBag.Title = "Kogebog";
+}
+
+<h1>@Model.Book.Title</h1>
+
+<h2>Opskrifter</h2>
+
+<ol>
+@foreach (var recipeId in Model.Book.RecipeIds)
+{
+  <li>@recipeId</li>
+}
+</ol>
+

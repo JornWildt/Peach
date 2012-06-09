@@ -49,10 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PeachGenericProvider.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recipes\RecipeProvider.cs" />
     <Compile Include="Recipes\RecipeRepository.cs" />
+    <Compile Include="PeachGenericProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Books\BookProvider.cs" />
+    <Compile Include="Books\BookRepository.cs" />
     <Compile Include="Utility.cs" />
   </ItemGroup>
   <ItemGroup>

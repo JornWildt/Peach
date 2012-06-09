@@ -1,5 +1,4 @@
-﻿using System;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Peach.Recipes.Query.Recipes;
 using Peach.Recipes.Web.Areas.Recipes.Models;
 

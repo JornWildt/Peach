@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using Peach.Recipes.Query.Books;
 using Peach.Recipes.Query.Recipes;
+
 
 namespace Peach.Recipes.TestDataGenerator.Shared
 {
@@ -11,6 +10,14 @@ namespace Peach.Recipes.TestDataGenerator.Shared
     #region Dependencies
 
     public IRecipeRepository RecipeRepository { get; set; }
+    public IBookRepository BookRepository { get; set; }
+
+    #endregion
+
+
+    #region Created stuff
+
+    Guid MexicanskeBurritosId;
 
     #endregion
 
@@ -18,6 +25,7 @@ namespace Peach.Recipes.TestDataGenerator.Shared
     public void CreateTestData()
     {
       BuildRecipes();
+      BuildBooks();
     }
 
 
@@ -29,12 +37,42 @@ namespace Peach.Recipes.TestDataGenerator.Shared
 
       Console.WriteLine("Add recipes");
 
-      Recipe r = new Recipe("mexican-casserole", "Mexican Casserole", @"In a large skillet over medium high heat, saute chicken in oil until cooked through and no longer pink inside. Add taco seasoning, beans, corn, salsa and a little water to prevent drying out. Cover skillet and simmer over medium low heat for 10 minutes.
-Preheat oven to 350 degrees F (175 degrees C).
-Transfer chicken mixture to a 9x13 inch baking dish. Top with 1/2 cup of the cheese and crushed tortilla chips.
-Bake in the preheated oven for 15 minutes. Add remaining 1/2 cup cheese and bake until cheese is melted and bubbly.");
+      Recipe r = new Recipe("mexicanske-burritos", "Mexicanske burritos", @"Snit salat, skær tomat i både og løg og agurk i tern. Åben for dåsen med majs.
 
-      RecipeRepository.Add(r);      
+Tænd ovnen på 180º C varmluft/200º C alm. ovn.
+
+Svits kødet i en gryde. Tilsæt krydderi og vand, og lad det simre ca. 5 min.
+
+Fyld de mexicanske wraps med kødet. Rul dem sammen, og læg dem i et ildfast fad.
+Drys osten udover. Gratineres i ovnen i ca. 10 minutter.
+
+Serverer de varme wraps med salat, creme fraiche og salsa til.");
+
+      r.AddIngredient(0.5f, "stk", "Hovedsalat");
+      r.AddIngredient(200, "g", "Cherry tomater");
+      r.AddIngredient(1, "stk", "Rødløg");
+      r.AddIngredient(1, "stk", "Agurk");
+      r.AddIngredient(1, "ds", "Majs på dåse");
+
+      RecipeRepository.Add(r);
+      MexicanskeBurritosId = r.Id;
+    }
+
+    #endregion
+
+
+    #region Books
+
+    protected void BuildBooks()
+    {
+      BookRepository.DeleteAll();
+
+      Console.WriteLine("Add books");
+
+      Book b = new Book("mexikansk-mad", "Mexikansk mad");
+      b.AddRecipe(MexicanskeBurritosId);
+
+      BookRepository.Add(b);
     }
 
     #endregion

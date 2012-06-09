@@ -16,6 +16,10 @@ namespace Peach.Recipes.Query.Recipes
 
     public string Title { get; protected set; }
 
+    // Kuverter/personer/antal enheder, servings
+
+    // Ingredienser uden antal "Salt og peber"
+
     public IEnumerable<IngredientLine> Ingredients
     {
       get { return IngredientList; }
@@ -25,13 +29,16 @@ namespace Peach.Recipes.Query.Recipes
 
     public string Description { get; protected set; }
 
+    // HTML: <p>, <h4> 
+
+
+    // Billeder!
+
     #endregion
 
 
     public Recipe()
     {
-      Id = Guid.NewGuid();
-      IngredientList = new List<IngredientLine>();
     }
 
 
@@ -47,6 +54,13 @@ namespace Peach.Recipes.Query.Recipes
       Key = key;
       Title = title;
       Description = description;
+    }
+
+
+    public void AddIngredient(float quantity, string unit, string title)
+    {
+      IngredientLine l = new IngredientLine(quantity, unit, title);
+      IngredientList.Add(l);
     }
   }
 }

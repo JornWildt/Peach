@@ -1,7 +1,9 @@
-﻿using Peach.Recipes.Query.MongoDB.Recipes;
+﻿using Norm.Configuration;
+using Peach.Recipes.Query.Books;
+using Peach.Recipes.Query.MongoDB.Books;
+using Peach.Recipes.Query.MongoDB.Recipes;
 using Peach.Recipes.Query.Recipes;
 using Xyperico.Base;
-using Norm.Configuration;
 
 
 namespace Peach.Recipes.Query.MongoDB
@@ -19,6 +21,11 @@ namespace Peach.Recipes.Query.MongoDB
         {
           cfg.ForProperty(r => r.Ingredients).Ignore();
         });
+
+        config.For<Book>(cfg =>
+        {
+          cfg.ForProperty(r => r.RecipeIds).Ignore();
+        });
       });
     }
 
@@ -27,6 +34,9 @@ namespace Peach.Recipes.Query.MongoDB
     {
       container.AddComponent<IRecipeProvider, RecipeProvider>();
       container.AddComponent<IRecipeRepository, RecipeRepository>();
+      
+      container.AddComponent<IBookProvider, BookProvider>();
+      container.AddComponent<IBookRepository, BookRepository>();
     }
   }
 }

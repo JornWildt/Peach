@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Books\Book.cs" />
+    <Compile Include="Books\IBookProvider.cs" />
+    <Compile Include="Books\IBookRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recipes\IngredientLine.cs" />
     <Compile Include="Recipes\IRecipeProvider.cs" />
