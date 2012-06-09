@@ -1,0 +1,67 @@
+===============================================================================
+Nu
+===============================================================================
+
+Bog-forside
+- Links til opskrifterne.
+- Layout (skabeloner)
+- Foto
+
+Bog-opskriftside
+- Sidenummer
+- Links til forrige/næste
+- Link til forside
+- Layout (skabeloner)
+- Foto
+
+Foto
+
+Tekstfelter
+- HTML visning, markdown eller lign.
+
+Opskrifter-elementer
+- Navn
+- Nøgle
+- Introduktion
+- Antal personer/enheder
+- Ingredientliste
+- Fremgangsmåde
+
+Ingredientliste-elementer
+- Antal (kan være tom)
+- Enhed (kan være tom)
+- Tekst
+- Kan også være "afsnit/overskrift" (for del-opskrifter)
+
+Bog-elementer
+- Navn
+- Nøgle
+- Forfatter
+- Liste af opskrifter
+- Introduktion
+
+Layouts
+- 4 spalter (1 = Ingredienser, 2 = Fremgangsmåde, 3+4 = Foto)
+- 4 spalter (1 = Ingredienser+Fremgangsmåde, 2 = Ingredienser+Fremgangsmåde, 3+4 = Foto)
+- 2 spalter (1 = Ingredienser+Fremgangsmåde, 2 = Foto)
+- 2 spalter (øverst: 1 = Ingredienser, 2 = Foto, nederst: 1+2 = Fremgangsmåde)
+- Fontvalg
+- Farvevalg
+
+===============================================================================
+Senere
+===============================================================================
+
+Opskrifter-elementer
+- Tilberedningstid (flere del-tider)
+- Tips(?)
+
+En eller anden form for kategorisering af opskrifter
+- Tags
+  - Fest/hverdag
+  - Børnevenlig
+- Geografisk region (Italiensk, Kinesisk, ...)
+- Sværhedsgrad
+
+Søgning
+- Fritekst

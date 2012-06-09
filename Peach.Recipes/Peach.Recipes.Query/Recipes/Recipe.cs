@@ -16,10 +16,6 @@ namespace Peach.Recipes.Query.Recipes
 
     public string Title { get; protected set; }
 
-    // Kuverter/personer/antal enheder, servings
-
-    // Ingredienser uden antal "Salt og peber"
-
     public IEnumerable<IngredientLine> Ingredients
     {
       get { return IngredientList; }
@@ -28,11 +24,6 @@ namespace Peach.Recipes.Query.Recipes
     protected List<IngredientLine> IngredientList { get; set; }
 
     public string Description { get; protected set; }
-
-    // HTML: <p>, <h4> 
-
-
-    // Billeder!
 
     #endregion
 

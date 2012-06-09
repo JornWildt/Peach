@@ -16,9 +16,9 @@ namespace Peach.Recipes.Query.Books
 
     public string Title { get; protected set; }
 
-    public IEnumerable<Guid> RecipeIds
+    public Guid[] RecipeIds
     {
-      get { return RecipeIdList; }
+      get { return RecipeIdList.ToArray(); }
     }
 
     protected List<Guid> RecipeIdList { get; set; }

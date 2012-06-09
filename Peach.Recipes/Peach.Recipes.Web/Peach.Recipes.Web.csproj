@@ -51,6 +51,7 @@
     <Compile Include="Areas\Books\Controllers\defaultController.cs" />
     <Compile Include="Areas\Books\Models\BookViewModel.cs" />
     <Compile Include="Areas\Books\BooksAreaRegistration.cs" />
+    <Compile Include="Areas\Books\Models\PageViewModel.cs" />
     <Compile Include="Areas\Recipes\Controllers\defaultController.cs" />
     <Compile Include="Areas\Recipes\Models\RecipeViewModel.cs" />
     <Compile Include="Areas\Recipes\RecipesAreaRegistration.cs" />
@@ -59,6 +60,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Areas\Books\Views\default\showpage.cshtml" />
+    <None Include="Areas\Books\Views\default\showpage2.cshtml" />
     <None Include="Areas\Books\Views\default\show.cshtml" />
     <None Include="Areas\Books\Views\Web.config" />
     <None Include="Areas\Recipes\Views\default\show.cshtml" />

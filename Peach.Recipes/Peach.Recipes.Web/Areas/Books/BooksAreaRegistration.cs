@@ -26,8 +26,14 @@ namespace Peach.Recipes.Web.Areas.Books
 
       context.MapRoute(
         "Books_Default",
-        "Books/{id}/{action}/{controller}",
+        "books/{key}/{action}",
         new { action = "show", controller = "default" },
+        new string[] { "Peach.Recipes.Web.Areas.Books.*" });
+
+      context.MapRoute(
+        "Books_Page",
+        "books/{key}/p/{page}",
+        new { action = "showpage", controller = "default" },
         new string[] { "Peach.Recipes.Web.Areas.Books.*" });
     }
   }

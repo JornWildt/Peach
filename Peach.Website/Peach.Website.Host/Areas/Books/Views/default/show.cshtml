@@ -10,7 +10,9 @@
 <ol>
 @foreach (var recipe in Model.Recipes)
 {
-  <li>@recipe.Title</li>
+  <li>
+    <a href="@Url.RouteUrl("Books_Page", new { key = Model.Book.Key, page = recipe.PageNo })">@recipe.Recipe.Title</a>
+  </li>
 }
 </ol>
 
