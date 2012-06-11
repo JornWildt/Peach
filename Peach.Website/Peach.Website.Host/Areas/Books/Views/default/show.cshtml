@@ -12,10 +12,10 @@
 <h2>Opskrifter</h2>
 
 <ol>
-@foreach (var recipe in Model.Recipes)
+@foreach (var page in Model.Pages)
 {
   <li>
-    <a href="@Url.RouteUrl("Books_Page", new { key = Model.Book.Key, page = recipe.PageNo })">@recipe.Recipe.Title</a>
+    <a href="@Url.RouteUrl("Books_Page", new { key = Model.Book.Key, page = page.PageNo })">@page.Title</a>
   </li>
 }
 </ol>

@@ -17,8 +17,8 @@ namespace Peach.Recipes.TestDataGenerator.Shared
 
     #region Created stuff
 
-    Guid MexicanskeBurritosId;
-    Guid BonneMosId;
+    Recipe MexicanskeBurritosRecipe;
+    Recipe BonneMosRecipe;
 
     #endregion
 
@@ -62,7 +62,7 @@ Serverer de varme wraps med salat, creme fraiche og salsa til.");
       r.AddIngredient(1, "ds", "Majs på dåse");
 
       RecipeRepository.Add(r);
-      MexicanskeBurritosId = r.Id;
+      MexicanskeBurritosRecipe = r;
     }
 
 
@@ -75,7 +75,7 @@ Serverer de varme wraps med salat, creme fraiche og salsa til.");
       r.AddIngredient(4, "stk", "Chili");
 
       RecipeRepository.Add(r);
-      BonneMosId = r.Id;
+      BonneMosRecipe = r;
     }
 
     #endregion
@@ -91,8 +91,12 @@ Serverer de varme wraps med salat, creme fraiche og salsa til.");
 
       Book b = new Book("mexikansk-mad", "Mexikansk mad", "En samling af mine yndlingsopskrifter fra Mexiko", Guid.NewGuid());
       b.PublishedDate = DateTime.UtcNow;
-      b.AddRecipe(MexicanskeBurritosId);
-      b.AddRecipe(BonneMosId);
+
+      RecipePage p1 = new RecipePage(MexicanskeBurritosRecipe.Title, 1, MexicanskeBurritosRecipe.Id);
+      b.AddPage(p1.Id);
+
+      RecipePage p2 = new RecipePage(BonneMosRecipe.Title, 2, BonneMosRecipe.Id);
+      b.AddPage(p2.Id);
 
       BookRepository.Add(b);
     }

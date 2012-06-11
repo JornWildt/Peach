@@ -4,6 +4,8 @@ using Peach.Recipes.Query.Books;
 using Peach.Recipes.Web.Areas.Books.Models;
 using Peach.Recipes.Query.Recipes;
 using System.Collections.Generic;
+using Peach.Recipes.Query.Pages;
+using System;
 
 
 namespace Peach.Recipes.Web.Areas.Books.Controllers
@@ -15,22 +17,10 @@ namespace Peach.Recipes.Web.Areas.Books.Controllers
     {
       Book b = BookProvider.GetByKey(key);
       
-      IList<BookViewModel.RecipeWrapper> recipes = new List<BookViewModel.RecipeWrapper>();
-      int pageNo = 1;
-
-      foreach (Recipe r in RecipeProvider.Get(b.RecipeIds))
-      {
-        recipes.Add(new BookViewModel.RecipeWrapper
-        {
-          Recipe = r,
-          PageNo = pageNo++
-        });
-      }
-
       BookViewModel result = new BookViewModel
       {
         Book = b,
-        Recipes = recipes
+        Pages = Enumerable.Empty<Page>()
       };
       return View(result);
     }
@@ -40,12 +30,13 @@ namespace Peach.Recipes.Web.Areas.Books.Controllers
     public ActionResult showpage(string key, int page)
     {
       Book b = BookProvider.GetByKey(key);
-      Recipe recipe = RecipeProvider.Get(b.RecipeIds[page - 1]);
+      Guid pageId = b.PageIds[page - 1];
+      Page p = new RecipePage("TEST", 1, Guid.NewGuid());
 
       PageViewModel result = new PageViewModel
       {
         Book = b,
-        Recipe = recipe
+        Page = p
       };
       return View(result);
     }

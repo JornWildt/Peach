@@ -1,7 +1,8 @@
-﻿using MongoDB.Bson.Serialization;
-using Peach.Recipes.Query.Books;
+﻿using Peach.Recipes.Query.Books;
 using Peach.Recipes.Query.MongoDB.Books;
+using Peach.Recipes.Query.MongoDB.Pages;
 using Peach.Recipes.Query.MongoDB.Recipes;
+using Peach.Recipes.Query.Pages;
 using Peach.Recipes.Query.Recipes;
 using Xyperico.Base;
 
@@ -21,6 +22,9 @@ namespace Peach.Recipes.Query.MongoDB
     {
       container.AddComponent<IRecipeProvider, RecipeProvider>();
       container.AddComponent<IRecipeRepository, RecipeRepository>();
+
+      container.AddComponent<IPageProvider, PageProvider>();
+      container.AddComponent<IPageRepository, PageRepository>();
       
       container.AddComponent<IBookProvider, BookProvider>();
       container.AddComponent<IBookRepository, BookRepository>();

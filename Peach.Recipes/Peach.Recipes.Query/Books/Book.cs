@@ -22,12 +22,12 @@ namespace Peach.Recipes.Query.Books
 
     public Guid AuthorId { get; protected set; }
 
-    public Guid[] RecipeIds
+    public Guid[] PageIds
     {
-      get { return RecipeIdList.ToArray(); }
+      get { return PageIdList.ToArray(); }
     }
 
-    protected List<Guid> RecipeIdList { get; set; }
+    protected List<Guid> PageIdList { get; set; }
 
     #endregion
 
@@ -44,7 +44,7 @@ namespace Peach.Recipes.Query.Books
       Condition.Requires(introduction, "introduction").IsNotNull();
 
       Id = Guid.NewGuid();
-      RecipeIdList = new List<Guid>();
+      PageIdList = new List<Guid>();
 
       Key = key;
       Title = title;
@@ -53,9 +53,9 @@ namespace Peach.Recipes.Query.Books
     }
 
 
-    public void AddRecipe(Guid recipeId)
+    public void AddPage(Guid pageId)
     {
-      RecipeIdList.Add(recipeId);
+      PageIdList.Add(pageId);
     }
   }
 }

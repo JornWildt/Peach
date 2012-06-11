@@ -2,8 +2,6 @@
 Nu
 ===============================================================================
 
-PageWrapper, delt kode
-
 Bog-indholdsfortegnelse
 - Layout (skabeloner)
 - Foto
@@ -32,7 +30,13 @@ Bog-opskriftside
 - Layout (skabeloner)
 - Foto
 
-Foto
+Bøger
+- Består af sider, ikke af opskrifter
+- Sider kan være
+  - Forside
+  - Indholdsfortegnelse
+  - Tekstside (med billede) (tips og tricks og gode historier)
+  - Opskrift
 
 Tekstfelter
 - HTML visning, markdown eller lign.

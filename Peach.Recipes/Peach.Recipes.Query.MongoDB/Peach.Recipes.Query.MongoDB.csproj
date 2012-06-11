@@ -52,6 +52,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\PageProvider.cs" />
+    <Compile Include="Pages\PageRepository.cs" />
     <Compile Include="Recipes\RecipeProvider.cs" />
     <Compile Include="Recipes\RecipeRepository.cs" />
     <Compile Include="PeachGenericProvider.cs" />

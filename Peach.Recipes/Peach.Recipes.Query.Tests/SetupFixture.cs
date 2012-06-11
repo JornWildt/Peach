@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using Peach.Recipes.Query.Tests.Books;
+using Peach.Recipes.Query.Tests.Pages;
 using Peach.Recipes.Query.Tests.Recipes;
 using Xyperico.Base;
 using Xyperico.Base.Collections;
@@ -16,6 +17,7 @@ namespace Peach.Recipes.Query.Tests
 
       container.AddComponent<IRecipeBuilder, RecipeBuilder>();
       container.AddComponent<IBookBuilder, BookBuilder>();
+      container.AddComponent<IPageBuilder, PageBuilder>();
     }
 
 
