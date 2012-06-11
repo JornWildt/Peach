@@ -89,7 +89,8 @@ Serverer de varme wraps med salat, creme fraiche og salsa til.");
 
       Console.WriteLine("Add books");
 
-      Book b = new Book("mexikansk-mad", "Mexikansk mad");
+      Book b = new Book("mexikansk-mad", "Mexikansk mad", "En samling af mine yndlingsopskrifter fra Mexiko", Guid.NewGuid());
+      b.PublishedDate = DateTime.UtcNow;
       b.AddRecipe(MexicanskeBurritosId);
       b.AddRecipe(BonneMosId);
 

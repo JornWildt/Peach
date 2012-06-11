@@ -1,9 +1,13 @@
 ﻿@model Peach.Recipes.Web.Areas.Books.Models.BookViewModel
 @{
-  ViewBag.Title = "Kogebog";
+  ViewBag.Title = @Model.Book.Title;
 }
 
 <h1>@Model.Book.Title</h1>
+<h3>Af @Model.Book.AuthorId (den @Model.Book.PublishedDate)</h3>
+
+<h2>Introduktion</h2>
+<p>@Model.Book.Introduction</p>
 
 <h2>Opskrifter</h2>
 

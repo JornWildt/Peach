@@ -28,6 +28,7 @@ namespace Peach.Recipes.Query.Tests.Books
       Assert.IsNotNull(r);
       Assert.AreEqual(MyBook.Id, r.Id);
       Assert.AreEqual(MyBook.Title, r.Title);
+      Assert.AreEqual(MyBook.Introduction, r.Introduction);
     }
 
 

@@ -1,4 +1,5 @@
-﻿using Peach.Recipes.Query.Books;
+﻿using System;
+using Peach.Recipes.Query.Books;
 using Xyperico.Base.Testing;
 
 
@@ -17,10 +18,11 @@ namespace Peach.Recipes.Query.Tests.Books
 
     public Book Build(string key)
     {
-      Book r = new Book(key, "Mexikanske specialiteter");
-      BookRepository.Add(r);
-      RegisterInstance(r);
-      return r;
+      Book b = new Book(key, "Mexikanske specialiteter", "Blah", Guid.NewGuid());
+      b.PublishedDate = DateTime.Now.Date;
+      BookRepository.Add(b);
+      RegisterInstance(b);
+      return b;
     }
 
     #endregion

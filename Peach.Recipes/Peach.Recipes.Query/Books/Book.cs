@@ -16,6 +16,12 @@ namespace Peach.Recipes.Query.Books
 
     public string Title { get; protected set; }
 
+    public string Introduction { get; protected set; }
+
+    public DateTime? PublishedDate { get; set; }
+
+    public Guid AuthorId { get; protected set; }
+
     public Guid[] RecipeIds
     {
       get { return RecipeIdList.ToArray(); }
@@ -31,16 +37,19 @@ namespace Peach.Recipes.Query.Books
     }
 
 
-    public Book(string key, string title)
+    public Book(string key, string title, string introduction, Guid authorId)
     {
       Condition.Requires(key, "key").IsNotNullOrEmpty();
       Condition.Requires(title, "title").IsNotNullOrEmpty();
+      Condition.Requires(introduction, "introduction").IsNotNull();
 
       Id = Guid.NewGuid();
       RecipeIdList = new List<Guid>();
 
       Key = key;
       Title = title;
+      Introduction = introduction;
+      AuthorId = authorId;
     }
 
 

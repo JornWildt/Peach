@@ -2,13 +2,26 @@
 Nu
 ===============================================================================
 
+PageWrapper, delt kode
+
+Bog-indholdsfortegnelse
+- Layout (skabeloner)
+- Foto
+
+Brugerprofiler (ny "service")
+- Plugin til visning af brugerinfo via ID
+
 Bog-forside
-- Links til opskrifterne.
+- Vise
+  - Titel
+  - Forfatter
 - Layout (skabeloner)
 - Foto
 
 Bog-opskriftside
-- Sidenummer
+- Visning af
+  - Sidenummer
+  - Kogebogsnavn (med link til forside)
 - Links til forrige/næste
 - Link til forside
 - Layout (skabeloner)
@@ -52,6 +65,10 @@ Layouts
 Senere
 ===============================================================================
 
+Indføre kladdebegreb for opskrifter
+
+Indføre kladdebegreb for bøger
+
 Opskrifter-elementer
 - Tilberedningstid (flere del-tider)
 - Tips(?)
@@ -65,3 +82,7 @@ En eller anden form for kategorisering af opskrifter
 
 Søgning
 - Fritekst
+
+Håndtere caching
+
+Licenshåndtering mht. deling og videre-distribuering
