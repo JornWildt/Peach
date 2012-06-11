@@ -11,10 +11,15 @@ Bog-indholdsfortegnelse
 Brugerprofiler (ny "service")
 - Plugin til visning af brugerinfo via ID
 
+Fotos (ny "Service")
+- Plugin til visning af foto via ID
+  - Forskellige skabeloner (1 stort, 1 stort + 2 små, ...)
+
 Bog-forside
 - Vise
   - Titel
   - Forfatter
+    - Link til profilside
 - Layout (skabeloner)
 - Foto
 

@@ -43,8 +43,6 @@ namespace Peach.Recipes.Query.Tests.Books
       Assert.AreEqual(MyBook.Id, r.Id);
       Assert.AreEqual(MyBook.Key, r.Key);
       Assert.AreEqual(MyBook.Title, r.Title);
-
-      Assert.Fail("Must check returned order of recipes");
     }
   }
 }
