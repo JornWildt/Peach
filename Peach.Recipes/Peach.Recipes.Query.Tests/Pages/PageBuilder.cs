@@ -15,11 +15,11 @@ namespace Peach.Recipes.Query.Tests.Pages
 
     #region IPageBuilder Members
 
-    public Page Build()
+    public Page BuildPage(string title = "Some page", int pageNo = 1)
     {
-      Page p = new Page("Some page", 12);
-      PageRepository.Add(p);
+      Page p = new Page(title, pageNo);
       RegisterInstance(p);
+      PageRepository.Add(p);
       return p;
     }
 

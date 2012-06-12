@@ -1,6 +1,7 @@
 ﻿using System;
 using Peach.Recipes.Query.Books;
 using Peach.Recipes.Query.Recipes;
+using Peach.Recipes.Query.Pages;
 
 
 namespace Peach.Recipes.TestDataGenerator.Shared
@@ -11,6 +12,7 @@ namespace Peach.Recipes.TestDataGenerator.Shared
 
     public IRecipeRepository RecipeRepository { get; set; }
     public IBookRepository BookRepository { get; set; }
+    public IPageRepository PageRepository { get; set; }
 
     #endregion
 
@@ -85,6 +87,7 @@ Serverer de varme wraps med salat, creme fraiche og salsa til.");
 
     protected void BuildBooks()
     {
+      PageRepository.DeleteAll();
       BookRepository.DeleteAll();
 
       Console.WriteLine("Add books");
@@ -92,11 +95,17 @@ Serverer de varme wraps med salat, creme fraiche og salsa til.");
       Book b = new Book("mexikansk-mad", "Mexikansk mad", "En samling af mine yndlingsopskrifter fra Mexiko", Guid.NewGuid());
       b.PublishedDate = DateTime.UtcNow;
 
-      RecipePage p1 = new RecipePage(MexicanskeBurritosRecipe.Title, 1, MexicanskeBurritosRecipe.Id);
+      Page p1 = new Page("Velbekomme", 1);
+      PageRepository.Add(p1);
       b.AddPage(p1.Id);
 
-      RecipePage p2 = new RecipePage(BonneMosRecipe.Title, 2, BonneMosRecipe.Id);
+      RecipePage p2 = new RecipePage(MexicanskeBurritosRecipe.Title, 2, MexicanskeBurritosRecipe.Id);
+      PageRepository.Add(p2);
       b.AddPage(p2.Id);
+
+      RecipePage p3 = new RecipePage(BonneMosRecipe.Title, 3, BonneMosRecipe.Id);
+      PageRepository.Add(p3);
+      b.AddPage(p3.Id);
 
       BookRepository.Add(b);
     }

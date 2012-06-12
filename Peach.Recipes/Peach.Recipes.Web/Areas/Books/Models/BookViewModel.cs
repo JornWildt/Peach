@@ -9,6 +9,6 @@ namespace Peach.Recipes.Web.Areas.Books.Models
   public class BookViewModel
   {
     public Book Book { get; set; }
-    public IEnumerable<Page> Pages { get; set; }
+    public IList<Page> Pages { get; set; }
   }
 }

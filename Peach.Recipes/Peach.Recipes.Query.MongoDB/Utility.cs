@@ -5,6 +5,7 @@ using Peach.Recipes.Query.MongoDB.Recipes;
 using Peach.Recipes.Query.Pages;
 using Peach.Recipes.Query.Recipes;
 using Xyperico.Base;
+using MongoDB.Bson.Serialization;
 
 
 namespace Peach.Recipes.Query.MongoDB
@@ -14,6 +15,12 @@ namespace Peach.Recipes.Query.MongoDB
     public static void Initialize(IObjectContainer container)
     {
       Xyperico.Base.MongoDB.Utility.Initialize();
+
+      BsonClassMap.RegisterClassMap<Recipe>();
+      BsonClassMap.RegisterClassMap<Book>();
+      BsonClassMap.RegisterClassMap<Page>();
+      BsonClassMap.RegisterClassMap<RecipePage>();
+
       ConfigureDependencies(container);
     }
 

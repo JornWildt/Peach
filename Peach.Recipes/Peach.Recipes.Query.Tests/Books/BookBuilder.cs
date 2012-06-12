@@ -20,8 +20,8 @@ namespace Peach.Recipes.Query.Tests.Books
     {
       Book b = new Book(key, "Mexikanske specialiteter", "Blah", Guid.NewGuid());
       b.PublishedDate = DateTime.Now.Date;
-      BookRepository.Add(b);
       RegisterInstance(b);
+      BookRepository.Add(b);
       return b;
     }
 

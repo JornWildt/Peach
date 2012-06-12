@@ -5,7 +5,7 @@ using Peach.Recipes.Web.Areas.Recipes.Models;
 
 namespace Peach.Recipes.Web.Areas.Recipes.Controllers
 {
-  public class defaultController : Controller
+  public class recipeController : Controller
   {
     [HttpGet]
     public ActionResult show(string id) // id = key!

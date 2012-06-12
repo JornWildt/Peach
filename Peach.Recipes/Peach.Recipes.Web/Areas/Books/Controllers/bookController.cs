@@ -10,17 +10,18 @@ using System;
 
 namespace Peach.Recipes.Web.Areas.Books.Controllers
 {
-  public class defaultController : Controller
+  public class bookController : Controller
   {
     [HttpGet]
     public ActionResult show(string key)
     {
       Book b = BookProvider.GetByKey(key);
+      IEnumerable<Page> pages = PageProvider.GetPages(b.PageIds);
       
       BookViewModel result = new BookViewModel
       {
         Book = b,
-        Pages = Enumerable.Empty<Page>()
+        Pages = pages.ToList()
       };
       return View(result);
     }
@@ -31,7 +32,7 @@ namespace Peach.Recipes.Web.Areas.Books.Controllers
     {
       Book b = BookProvider.GetByKey(key);
       Guid pageId = b.PageIds[page - 1];
-      Page p = new RecipePage("TEST", 1, Guid.NewGuid());
+      Page p = PageProvider.Get(pageId);
 
       PageViewModel result = new PageViewModel
       {

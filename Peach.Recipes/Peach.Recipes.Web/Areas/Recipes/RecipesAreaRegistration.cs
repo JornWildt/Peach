@@ -27,7 +27,7 @@ namespace Peach.Recipes.Web.Areas.Recipes
       context.MapRoute(
         "Recipes_Default",
         "recipes/{id}/{action}/{controller}",
-        new { action = "show", controller = "default" },
+        new { action = "show", controller = "recipe" },
         new string[] { "Peach.Recipes.Web.Areas.Recipes.*" });
     }
   }
