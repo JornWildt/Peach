@@ -1,0 +1,18 @@
+﻿@model Peach.Recipes.Query.Recipes.RecipePage
+
+<h2>Ingredienser</h2>
+
+<table>
+@foreach (var ingredient in Model.Recipe.Ingredients)
+{
+  <tr>
+    <td>@ingredient.Quantity</td>
+    <td>@ingredient.Unit</td>
+    <td>@ingredient.Title</td>
+  </tr>
+}
+</table>
+
+<h2>Fremgangsmåde</h2>
+
+<p>@Model.Recipe.Description</p>

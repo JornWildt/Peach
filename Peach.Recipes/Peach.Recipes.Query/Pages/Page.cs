@@ -5,7 +5,7 @@ using Xyperico.Base;
 
 namespace Peach.Recipes.Query.Pages
 {
-  public class Page : IHaveId<Guid>
+  public abstract class Page : IHaveId<Guid>
   {
     #region Public persisted properties
 
@@ -32,5 +32,11 @@ namespace Peach.Recipes.Query.Pages
       Title = title;
       PageNo = pageNo;
     }
+
+
+    public abstract string TemplateName { get; }
+
+
+    public abstract void InitializeForView(IObjectResolver container);
   }
 }

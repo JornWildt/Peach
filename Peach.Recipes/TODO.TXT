@@ -30,13 +30,11 @@ Bog-opskriftside
 - Layout (skabeloner)
 - Foto
 
-Bøger
-- Består af sider, ikke af opskrifter
-- Sider kan være
-  - Forside
-  - Indholdsfortegnelse
-  - Tekstside (med billede) (tips og tricks og gode historier)
-  - Opskrift
+Kogebogseksempel
+- Familiens livretter
+  - Weekendmenuer som kan genopvarmes
+  - Nemme hverdagsretter
+  - Hurtige desserter
 
 Tekstfelter
 - HTML visning, markdown eller lign.

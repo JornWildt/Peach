@@ -95,7 +95,7 @@ Serverer de varme wraps med salat, creme fraiche og salsa til.");
       Book b = new Book("mexikansk-mad", "Mexikansk mad", "En samling af mine yndlingsopskrifter fra Mexiko", Guid.NewGuid());
       b.PublishedDate = DateTime.UtcNow;
 
-      Page p1 = new Page("Velbekomme", 1);
+      Page p1 = new TextPage("Velbekomme", 1, "Demo");
       PageRepository.Add(p1);
       b.AddPage(p1.Id);
 

@@ -1,17 +1,20 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
 using Peach.Recipes.Query.Books;
-using Peach.Recipes.Web.Areas.Books.Models;
-using Peach.Recipes.Query.Recipes;
-using System.Collections.Generic;
 using Peach.Recipes.Query.Pages;
-using System;
+using Peach.Recipes.Web.Areas.Books.Models;
+using Xyperico.Base;
 
 
 namespace Peach.Recipes.Web.Areas.Books.Controllers
 {
   public class bookController : Controller
   {
+    public IObjectResolver ObjectResolver { get; set; }
+
+
     [HttpGet]
     public ActionResult show(string key)
     {
@@ -33,11 +36,13 @@ namespace Peach.Recipes.Web.Areas.Books.Controllers
       Book b = BookProvider.GetByKey(key);
       Guid pageId = b.PageIds[page - 1];
       Page p = PageProvider.Get(pageId);
+      p.InitializeForView(ObjectResolver);
 
       PageViewModel result = new PageViewModel
       {
         Book = b,
-        Page = p
+        Page = p,
+        PageTemplateName = "PageTemplates/" + p.TemplateName
       };
       return View(result);
     }

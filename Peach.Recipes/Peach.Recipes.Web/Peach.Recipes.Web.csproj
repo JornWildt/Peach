@@ -41,6 +41,7 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,9 +63,11 @@
   <ItemGroup>
     <None Include="Areas\Books\Views\book\showpage.cshtml" />
     <None Include="Areas\Books\Views\book\show.cshtml" />
+    <None Include="Areas\Books\Views\Shared\PageTemplates\recipe.cshtml" />
     <None Include="Areas\Books\Views\Web.config" />
     <None Include="Areas\Recipes\Views\recipe\show.cshtml" />
     <None Include="Areas\Recipes\Views\Web.config" />
+    <None Include="Areas\Web.config" />
     <None Include="copyfiles.bat" />
   </ItemGroup>
   <ItemGroup>
@@ -85,7 +88,12 @@
       <Name>Peach.Recipes.Query</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Areas\Books\Views\Shared\PageTemplates\text.cshtml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>cd $(ProjectDir)

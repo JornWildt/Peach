@@ -1,6 +1,7 @@
 ﻿using System.Web.Optimization;
 using log4net;
 using Peach.Website.Host;
+using Xyperico.Base;
 
 
 namespace Peach.Website.Core
@@ -17,6 +18,8 @@ namespace Peach.Website.Core
       //FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
       //RouteConfig.RegisterRoutes(RouteTable.Routes);
       BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+      Xyperico.Base.ObjectContainer.Container.RegisterInstance<IObjectResolver>(Xyperico.Base.ObjectContainer.Container);
     }
 
 

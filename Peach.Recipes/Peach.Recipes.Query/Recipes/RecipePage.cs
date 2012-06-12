@@ -1,6 +1,7 @@
 ﻿using System;
 using CuttingEdge.Conditions;
 using Peach.Recipes.Query.Pages;
+using Xyperico.Base;
 
 
 namespace Peach.Recipes.Query.Recipes
@@ -21,5 +22,20 @@ namespace Peach.Recipes.Query.Recipes
 
       RecipeId = recipeId;
     }
+
+
+    public override string TemplateName
+    {
+      get { return "recipe"; }
+    }
+
+
+    public override void InitializeForView(IObjectResolver resolver)
+    {
+      Recipe = resolver.Resolve<IRecipeProvider>().Get(RecipeId);
+    }
+
+
+    public Recipe Recipe { get; protected set; }
   }
 }

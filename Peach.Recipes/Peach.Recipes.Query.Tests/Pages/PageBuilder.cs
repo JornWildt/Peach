@@ -17,7 +17,7 @@ namespace Peach.Recipes.Query.Tests.Pages
 
     public Page BuildPage(string title = "Some page", int pageNo = 1)
     {
-      Page p = new Page(title, pageNo);
+      Page p = new TextPage(title, pageNo, "Blah");
       RegisterInstance(p);
       PageRepository.Add(p);
       return p;

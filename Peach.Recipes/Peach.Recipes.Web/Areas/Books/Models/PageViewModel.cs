@@ -8,5 +8,7 @@ namespace Peach.Recipes.Web.Areas.Books.Models
   {
     public Book Book { get; set; }
     public Page Page { get; set; }
+    public string PageTemplateName { get; set; }
+    public object PageTemplateData { get; set; }
   }
 }

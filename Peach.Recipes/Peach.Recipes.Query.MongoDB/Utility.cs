@@ -20,6 +20,7 @@ namespace Peach.Recipes.Query.MongoDB
       BsonClassMap.RegisterClassMap<Book>();
       BsonClassMap.RegisterClassMap<Page>();
       BsonClassMap.RegisterClassMap<RecipePage>();
+      BsonClassMap.RegisterClassMap<TextPage>();
 
       ConfigureDependencies(container);
     }
