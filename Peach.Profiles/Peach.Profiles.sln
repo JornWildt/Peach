@@ -26,6 +26,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 		Peach.Profiles.config = Peach.Profiles.config
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peach.Profiles.Web", "Peach.Profiles.Web\Peach.Profiles.Web.csproj", "{0E84525A-F0E7-4917-85E7-4A8987C45451}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,6 +62,10 @@ Global
 		{403A6A8D-0FD2-4E26-916E-9CF2A7B0859D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{403A6A8D-0FD2-4E26-916E-9CF2A7B0859D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{403A6A8D-0FD2-4E26-916E-9CF2A7B0859D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E84525A-F0E7-4917-85E7-4A8987C45451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E84525A-F0E7-4917-85E7-4A8987C45451}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E84525A-F0E7-4917-85E7-4A8987C45451}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E84525A-F0E7-4917-85E7-4A8987C45451}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,5 +78,6 @@ Global
 		{D7201731-A3F8-4A3D-8C9B-BF165F8A1A01} = {A5B0BB8C-5EA6-449F-B3EE-78D78FC4E5B6}
 		{B970B8A5-AFEB-461F-995F-F3173826833F} = {A5B0BB8C-5EA6-449F-B3EE-78D78FC4E5B6}
 		{403A6A8D-0FD2-4E26-916E-9CF2A7B0859D} = {A5B0BB8C-5EA6-449F-B3EE-78D78FC4E5B6}
+		{0E84525A-F0E7-4917-85E7-4A8987C45451} = {D194CA77-DAE9-4D7F-B576-2DA3444FF156}
 	EndGlobalSection
 EndGlobal
