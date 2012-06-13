@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D7ECB7B6-6D23-4D52-8430-11F0B34B4CB2}</ProjectGuid>
+    <ProjectGuid>{403A6A8D-0FD2-4E26-916E-9CF2A7B0859D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Peach.Recipes.Query.MongoDB</RootNamespace>
-    <AssemblyName>Peach.Recipes.Query.MongoDB</AssemblyName>
+    <RootNamespace>Peach.Profiles.Query.MongoDB</RootNamespace>
+    <AssemblyName>Peach.Profiles.Query.MongoDB</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -21,7 +21,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -32,15 +31,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CuttingEdge.Conditions, Version=1.1.0.10041, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="CuttingEdge.Conditions">
       <HintPath>..\..\..\Xyperico\Libraries\CuttingEdge.Conditions.dll</HintPath>
     </Reference>
     <Reference Include="MongoDB.Bson">
       <HintPath>..\..\..\Xyperico\Libraries\MongoDB\MongoDB.Bson.dll</HintPath>
     </Reference>
-    <Reference Include="MongoDB.Driver, Version=1.4.2.4500, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="MongoDB.Driver">
       <HintPath>..\..\..\Xyperico\Libraries\MongoDB\MongoDB.Driver.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -52,14 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pages\PageProvider.cs" />
-    <Compile Include="Pages\PageRepository.cs" />
-    <Compile Include="Recipes\RecipeProvider.cs" />
-    <Compile Include="Recipes\RecipeRepository.cs" />
-    <Compile Include="PeachRecipesGenericProvider.cs" />
+    <Compile Include="PeachProfilesGenericProvider.cs" />
+    <Compile Include="Profiles\ProfileProvider.cs" />
+    <Compile Include="Profiles\ProfileRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Books\BookProvider.cs" />
-    <Compile Include="Books\BookRepository.cs" />
     <Compile Include="Utility.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -71,11 +64,12 @@
       <Project>{054A30BA-B232-4FF1-9F23-1040D075764A}</Project>
       <Name>Xyperico.Base</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Peach.Recipes.Query\Peach.Recipes.Query.csproj">
-      <Project>{55A48DE0-3FB2-4CE0-873A-554DFE1B48B9}</Project>
-      <Name>Peach.Recipes.Query</Name>
+    <ProjectReference Include="..\Peach.Profiles.Query\Peach.Profiles.Query.csproj">
+      <Project>{D7201731-A3F8-4A3D-8C9B-BF165F8A1A01}</Project>
+      <Name>Peach.Profiles.Query</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

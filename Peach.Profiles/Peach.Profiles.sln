@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Base", "Base", "{7AC5715C-961F-4CFD-9C61-7363547EEF62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xyperico.Base", "..\..\Xyperico\Source\Xyperico.Base\Xyperico.Base\Xyperico.Base.csproj", "{054A30BA-B232-4FF1-9F23-1040D075764A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xyperico.Base.MongoDB", "..\..\Xyperico\Source\Xyperico.Base\Xyperico.Base.MongoDB\Xyperico.Base.MongoDB\Xyperico.Base.MongoDB.csproj", "{DF1A3B54-FD53-414F-8C54-0D9F6EDEB2C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xyperico.Base.Testing", "..\..\Xyperico\Source\Xyperico.Base\Xyperico.Base.Testing\Xyperico.Base.Testing.csproj", "{0A6B133C-2DAD-49D9-9686-AF4E2021ACA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xyperico.Web.Mvc", "..\..\Xyperico\Source\Xyperico.Web\Xyperico.Web.Mvc\Xyperico.Web.Mvc\Xyperico.Web.Mvc.csproj", "{5BAC1705-410B-4B27-AA97-03C1EF567E1A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Query", "Query", "{A5B0BB8C-5EA6-449F-B3EE-78D78FC4E5B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{D194CA77-DAE9-4D7F-B576-2DA3444FF156}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peach.Profiles.Query", "Peach.Profiles.Query\Peach.Profiles.Query.csproj", "{D7201731-A3F8-4A3D-8C9B-BF165F8A1A01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peach.Profiles.Query.Tests", "Peach.Profiles.Query.Tests\Peach.Profiles.Query.Tests.csproj", "{B970B8A5-AFEB-461F-995F-F3173826833F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peach.Profiles.Query.MongoDB", "Peach.Profiles.Query.MongoDB\Peach.Profiles.Query.MongoDB.csproj", "{403A6A8D-0FD2-4E26-916E-9CF2A7B0859D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{01655C23-90F8-4269-8A96-64C5CD0418C6}"
+	ProjectSection(SolutionItems) = preProject
+		Peach.Profiles.config = Peach.Profiles.config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{054A30BA-B232-4FF1-9F23-1040D075764A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{054A30BA-B232-4FF1-9F23-1040D075764A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{054A30BA-B232-4FF1-9F23-1040D075764A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{054A30BA-B232-4FF1-9F23-1040D075764A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF1A3B54-FD53-414F-8C54-0D9F6EDEB2C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF1A3B54-FD53-414F-8C54-0D9F6EDEB2C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF1A3B54-FD53-414F-8C54-0D9F6EDEB2C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF1A3B54-FD53-414F-8C54-0D9F6EDEB2C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A6B133C-2DAD-49D9-9686-AF4E2021ACA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A6B133C-2DAD-49D9-9686-AF4E2021ACA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A6B133C-2DAD-49D9-9686-AF4E2021ACA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A6B133C-2DAD-49D9-9686-AF4E2021ACA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BAC1705-410B-4B27-AA97-03C1EF567E1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BAC1705-410B-4B27-AA97-03C1EF567E1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BAC1705-410B-4B27-AA97-03C1EF567E1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BAC1705-410B-4B27-AA97-03C1EF567E1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7201731-A3F8-4A3D-8C9B-BF165F8A1A01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7201731-A3F8-4A3D-8C9B-BF165F8A1A01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7201731-A3F8-4A3D-8C9B-BF165F8A1A01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7201731-A3F8-4A3D-8C9B-BF165F8A1A01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B970B8A5-AFEB-461F-995F-F3173826833F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B970B8A5-AFEB-461F-995F-F3173826833F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B970B8A5-AFEB-461F-995F-F3173826833F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B970B8A5-AFEB-461F-995F-F3173826833F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{403A6A8D-0FD2-4E26-916E-9CF2A7B0859D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{403A6A8D-0FD2-4E26-916E-9CF2A7B0859D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{403A6A8D-0FD2-4E26-916E-9CF2A7B0859D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{403A6A8D-0FD2-4E26-916E-9CF2A7B0859D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{054A30BA-B232-4FF1-9F23-1040D075764A} = {7AC5715C-961F-4CFD-9C61-7363547EEF62}
+		{DF1A3B54-FD53-414F-8C54-0D9F6EDEB2C9} = {7AC5715C-961F-4CFD-9C61-7363547EEF62}
+		{0A6B133C-2DAD-49D9-9686-AF4E2021ACA7} = {7AC5715C-961F-4CFD-9C61-7363547EEF62}
+		{5BAC1705-410B-4B27-AA97-03C1EF567E1A} = {7AC5715C-961F-4CFD-9C61-7363547EEF62}
+		{D7201731-A3F8-4A3D-8C9B-BF165F8A1A01} = {A5B0BB8C-5EA6-449F-B3EE-78D78FC4E5B6}
+		{B970B8A5-AFEB-461F-995F-F3173826833F} = {A5B0BB8C-5EA6-449F-B3EE-78D78FC4E5B6}
+		{403A6A8D-0FD2-4E26-916E-9CF2A7B0859D} = {A5B0BB8C-5EA6-449F-B3EE-78D78FC4E5B6}
+	EndGlobalSection
+EndGlobal

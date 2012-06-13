@@ -4,7 +4,7 @@ using Peach.Recipes.Query.Pages;
 
 namespace Peach.Recipes.Query.MongoDB.Pages
 {
-  public class PageRepository : PeachGenericRepository<Page, Guid>, IPageRepository
+  public class PageRepository : PeachRecipesGenericRepository<Page, Guid>, IPageRepository
   {
   }
 }

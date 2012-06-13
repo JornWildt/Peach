@@ -9,7 +9,7 @@ using MDBQuery = MongoDB.Driver.Builders.Query;
 
 namespace Peach.Recipes.Query.MongoDB.Recipes
 {
-  public class RecipeProvider : PeachGenericProvider<Recipe, Guid>, IRecipeProvider
+  public class RecipeProvider : PeachRecipesGenericProvider<Recipe, Guid>, IRecipeProvider
   {
     #region IRecipeProvider Members
 

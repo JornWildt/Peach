@@ -4,7 +4,7 @@ using Peach.Recipes.Query.Books;
 
 namespace Peach.Recipes.Query.MongoDB.Books
 {
-  public class BookRepository : PeachGenericRepository<Book, Guid>, IBookRepository
+  public class BookRepository : PeachRecipesGenericRepository<Book, Guid>, IBookRepository
   {
   }
 }

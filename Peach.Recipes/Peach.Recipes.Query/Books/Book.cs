@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Xyperico.Base;
 using CuttingEdge.Conditions;
+using Xyperico.Base;
 
 
 namespace Peach.Recipes.Query.Books
