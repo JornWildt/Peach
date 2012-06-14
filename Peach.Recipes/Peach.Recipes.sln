@@ -18,7 +18,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{2906BFA7-1B3D-4842-9197-568C5461A3D3}"
 	ProjectSection(SolutionItems) = preProject
 		Peach.Recipes.config = Peach.Recipes.config
-		TODO.TXT = TODO.TXT
+		..\TODO.TXT = ..\TODO.TXT
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peach.Recipes.TestDataGenerator", "Peach.Recipes.TestDataGenerator\Peach.Recipes.TestDataGenerator.csproj", "{56814343-C664-4EE3-B9CF-870941373E39}"

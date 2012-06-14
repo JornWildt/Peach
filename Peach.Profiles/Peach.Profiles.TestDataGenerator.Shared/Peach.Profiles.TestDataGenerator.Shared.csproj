@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0E84525A-F0E7-4917-85E7-4A8987C45451}</ProjectGuid>
+    <ProjectGuid>{C0746960-36C5-46AF-8A1C-3638DB118FC6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Peach.Profiles.Web</RootNamespace>
-    <AssemblyName>Peach.Profiles.Web</AssemblyName>
+    <RootNamespace>Peach.Profiles.TestDataGenerator.Shared</RootNamespace>
+    <AssemblyName>Peach.Profiles.TestDataGenerator.Shared</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,15 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="log4net">
-      <HintPath>..\..\..\Xyperico\Libraries\log4net.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Web" />
-    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,32 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Areas\Profiles\Controllers\profileController.cs" />
-    <Compile Include="Areas\Profiles\DisplayExtensions.cs" />
-    <Compile Include="Areas\Profiles\Models\ShowProfileViewModel.cs" />
-    <Compile Include="Areas\Profiles\ProfilesAreaRegistration.cs" />
-    <Compile Include="Areas\Startup\StartupAreaRegistration.cs" />
-    <Compile Include="Controller.cs" />
+    <Compile Include="TestDataBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Areas\Profiles\Views\profile\show.cshtml" />
-    <None Include="Areas\Profiles\Web.config" />
-    <None Include="copyfiles.bat" />
-  </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\..\Xyperico\Source\Xyperico.Base\Xyperico.Base\Xyperico.Base.csproj">
       <Project>{054A30BA-B232-4FF1-9F23-1040D075764A}</Project>
       <Name>Xyperico.Base</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Xyperico\Source\Xyperico.Web\Xyperico.Web.Mvc\Xyperico.Web.Mvc\Xyperico.Web.Mvc.csproj">
-      <Project>{5BAC1705-410B-4B27-AA97-03C1EF567E1A}</Project>
-      <Name>Xyperico.Web.Mvc</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Peach.Profiles.Query.MongoDB\Peach.Profiles.Query.MongoDB.csproj">
-      <Project>{403A6A8D-0FD2-4E26-916E-9CF2A7B0859D}</Project>
-      <Name>Peach.Profiles.Query.MongoDB</Name>
     </ProjectReference>
     <ProjectReference Include="..\Peach.Profiles.Query\Peach.Profiles.Query.csproj">
       <Project>{D7201731-A3F8-4A3D-8C9B-BF165F8A1A01}</Project>
@@ -80,10 +54,6 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PreBuildEvent>cd $(projectDir)
-copyfiles.bat</PreBuildEvent>
-  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

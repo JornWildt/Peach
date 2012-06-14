@@ -1,9 +1,9 @@
-﻿using Peach.Recipes.TestDataGenerator.Shared;
+﻿using Peach.Profiles.TestDataGenerator.Shared;
 using Xyperico.Base;
 using Xyperico.Base.Collections;
 
 
-namespace Peach.Recipes.TestDataGenerator
+namespace Peach.Profiles.TestDataGenerator
 {
   public class Program
   {
@@ -20,7 +20,7 @@ namespace Peach.Recipes.TestDataGenerator
     static void Configure()
     {
       Xyperico.Base.MongoDB.Utility.Initialize();
-      Peach.Recipes.Query.MongoDB.Utility.Initialize(Xyperico.Base.ObjectContainer.Container);
+      Peach.Profiles.Query.MongoDB.Utility.Initialize(Xyperico.Base.ObjectContainer.Container);
       ConfigureContainer(Xyperico.Base.ObjectContainer.Container);
       Builder = Xyperico.Base.ObjectContainer.Container.Instantiate<TestDataBuilder>();
     }

@@ -1,10 +1,11 @@
 ﻿@model Peach.Recipes.Web.Areas.Books.Models.BookViewModel
+@using Peach.Profiles.Web.Areas.Profiles
 @{
   ViewBag.Title = @Model.Book.Title;
 }
 
 <h1>@Model.Book.Title</h1>
-<h3>Af @Model.Book.AuthorId (den @Model.Book.PublishedDate)</h3>
+<h3>@Html.DisplayProfile(@Model.Book.AuthorId)</h3>
 
 <h2>Introduktion</h2>
 <p>@Model.Book.Introduction</p>

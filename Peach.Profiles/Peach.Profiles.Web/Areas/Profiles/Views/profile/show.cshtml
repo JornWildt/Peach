@@ -1,1 +1,8 @@
-﻿A Profile!
+﻿@model Peach.Profiles.Web.Areas.Profiles.Models.ShowProfileViewModel
+@{
+  ViewBag.Title = @Model.Profile.FullName;
+}
+
+<h1>@Model.Profile.FullName</h1>
+
+<p>@Model.Profile.AboutMe</p>

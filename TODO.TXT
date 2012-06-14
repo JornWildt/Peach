@@ -2,6 +2,8 @@
 Nu
 ===============================================================================
 
+Delt kode til test-data ID'er
+
 Bog-indholdsfortegnelse
 - Layout (skabeloner)
 - Foto
@@ -29,6 +31,10 @@ Bog-opskriftside
 - Link til forside
 - Layout (skabeloner)
 - Foto
+
+Fejlhåndtering
+- Ukendt profil i DisplayProfile
+- Ukendt bog/side/opskrift mm. som enkeltside
 
 Kogebogseksempel
 - Familiens livretter

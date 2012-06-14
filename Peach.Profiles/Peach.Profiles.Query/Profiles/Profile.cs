@@ -25,13 +25,13 @@ namespace Peach.Profiles.Query.Profiles
     }
 
 
-    public Profile(string profileName, string fullName, string aboutMe)
+    public Profile(string profileName, string fullName, string aboutMe, Guid? id = null)
     {
       Condition.Requires(profileName, "profileName").IsNotNullOrEmpty();
       Condition.Requires(fullName, "fullName").IsNotNullOrEmpty();
       Condition.Requires(aboutMe, "aboutMe").IsNotNull();
 
-      Id = Guid.NewGuid();
+      Id = id ?? Guid.NewGuid();
 
       ProfileName = profileName;
       FullName = fullName;

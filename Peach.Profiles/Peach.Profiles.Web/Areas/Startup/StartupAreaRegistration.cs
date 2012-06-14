@@ -3,7 +3,7 @@ using log4net;
 using Xyperico.Base;
 
 
-namespace Peach.Recipes.Web.Areas.Startup
+namespace Peach.Profiles.Web.Areas.Startup
 {
   public class StartupAreaRegistration : AreaRegistration
   {
@@ -14,20 +14,20 @@ namespace Peach.Recipes.Web.Areas.Startup
     {
       get
       {
-        return "RecipesStartup";
+        return "ProfilesStartup";
       }
     }
 
     public override void RegisterArea(AreaRegistrationContext context)
     {
-      Logger.Debug("Register Recipes startup area");
+      Logger.Debug("Register Profiles startup area");
       Initialize(Xyperico.Base.ObjectContainer.Container);
     }
 
 
     public static void Initialize(IObjectContainer container)
     {
-      Peach.Recipes.Query.MongoDB.Utility.Initialize(container);
+      Peach.Profiles.Query.MongoDB.Utility.Initialize(container);
     }
   }
 }
