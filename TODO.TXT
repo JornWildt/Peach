@@ -2,14 +2,11 @@
 Nu
 ===============================================================================
 
-Delt kode til test-data ID'er
+Sitet er sgu lidt sløvt (mange .js-filer?)
 
 Bog-indholdsfortegnelse
 - Layout (skabeloner)
 - Foto
-
-Brugerprofiler (ny "service")
-- Plugin til visning af brugerinfo via ID
 
 Fotos (ny "Service")
 - Plugin til visning af foto via ID
@@ -41,6 +38,7 @@ Kogebogseksempel
   - Weekendmenuer som kan genopvarmes
   - Nemme hverdagsretter
   - Hurtige desserter
+- Campingkogebogen
 
 Tekstfelter
 - HTML visning, markdown eller lign.
@@ -97,5 +95,6 @@ Søgning
 - Fritekst
 
 Håndtere caching
+- DisplayProfile
 
 Licenshåndtering mht. deling og videre-distribuering

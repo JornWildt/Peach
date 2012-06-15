@@ -33,6 +33,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xyperico.Web.Mvc", "..\..\X
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xyperico.Base.Testing", "..\..\Xyperico\Source\Xyperico.Base\Xyperico.Base.Testing\Xyperico.Base.Testing.csproj", "{0A6B133C-2DAD-49D9-9686-AF4E2021ACA7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peach.TestData.Shared", "..\Peach.TestData.Shared\Peach.TestData.Shared.csproj", "{B6C2842E-A2F2-4263-9201-B9B745B87FAC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestData", "TestData", "{031D57D4-945A-46B5-9B56-20EFD8A3F21A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -143,6 +147,16 @@ Global
 		{0A6B133C-2DAD-49D9-9686-AF4E2021ACA7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{0A6B133C-2DAD-49D9-9686-AF4E2021ACA7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{0A6B133C-2DAD-49D9-9686-AF4E2021ACA7}.Release|x86.ActiveCfg = Release|Any CPU
+		{B6C2842E-A2F2-4263-9201-B9B745B87FAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6C2842E-A2F2-4263-9201-B9B745B87FAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6C2842E-A2F2-4263-9201-B9B745B87FAC}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B6C2842E-A2F2-4263-9201-B9B745B87FAC}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B6C2842E-A2F2-4263-9201-B9B745B87FAC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B6C2842E-A2F2-4263-9201-B9B745B87FAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6C2842E-A2F2-4263-9201-B9B745B87FAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6C2842E-A2F2-4263-9201-B9B745B87FAC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B6C2842E-A2F2-4263-9201-B9B745B87FAC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B6C2842E-A2F2-4263-9201-B9B745B87FAC}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -156,5 +170,8 @@ Global
 		{55A48DE0-3FB2-4CE0-873A-554DFE1B48B9} = {C09E8F04-4D9C-4DEC-9460-D8B895D15B14}
 		{D7ECB7B6-6D23-4D52-8430-11F0B34B4CB2} = {C09E8F04-4D9C-4DEC-9460-D8B895D15B14}
 		{C6B82CA5-2EAD-4D15-9258-7EFA299863F6} = {C09E8F04-4D9C-4DEC-9460-D8B895D15B14}
+		{56814343-C664-4EE3-B9CF-870941373E39} = {031D57D4-945A-46B5-9B56-20EFD8A3F21A}
+		{4DA274CE-4008-42BD-AE5F-8EE3F575BE69} = {031D57D4-945A-46B5-9B56-20EFD8A3F21A}
+		{B6C2842E-A2F2-4263-9201-B9B745B87FAC} = {031D57D4-945A-46B5-9B56-20EFD8A3F21A}
 	EndGlobalSection
 EndGlobal

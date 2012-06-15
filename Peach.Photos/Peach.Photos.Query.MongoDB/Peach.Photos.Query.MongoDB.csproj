@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4DA274CE-4008-42BD-AE5F-8EE3F575BE69}</ProjectGuid>
+    <ProjectGuid>{2E02B06B-23C0-4EE3-BF40-4F50B9C102D9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Peach.Recipes.TestDataGenerator.Shared</RootNamespace>
-    <AssemblyName>Peach.Recipes.TestDataGenerator.Shared</AssemblyName>
+    <RootNamespace>Peach.Photos.Query.MongoDB</RootNamespace>
+    <AssemblyName>Peach.Photos.Query.MongoDB</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,6 +31,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CuttingEdge.Conditions">
+      <HintPath>..\..\..\Xyperico\Libraries\CuttingEdge.Conditions.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\..\..\Xyperico\Libraries\MongoDB\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\..\..\Xyperico\Libraries\MongoDB\MongoDB.Driver.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,27 +49,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PeachPhotosGenericProvider.cs" />
+    <Compile Include="Photos\PhotoProvider.cs" />
+    <Compile Include="Photos\PhotoRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestDataBuilder.cs" />
+    <Compile Include="Utility.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Xyperico\Source\Xyperico.Base\Xyperico.Base.MongoDB\Xyperico.Base.MongoDB\Xyperico.Base.MongoDB.csproj">
+      <Project>{DF1A3B54-FD53-414F-8C54-0D9F6EDEB2C9}</Project>
+      <Name>Xyperico.Base.MongoDB</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Xyperico\Source\Xyperico.Base\Xyperico.Base\Xyperico.Base.csproj">
       <Project>{054A30BA-B232-4FF1-9F23-1040D075764A}</Project>
       <Name>Xyperico.Base</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Peach.TestData.Shared\Peach.TestData.Shared.csproj">
-      <Project>{B6C2842E-A2F2-4263-9201-B9B745B87FAC}</Project>
-      <Name>Peach.TestData.Shared</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Peach.Recipes.Query.MongoDB\Peach.Recipes.Query.MongoDB.csproj">
-      <Project>{D7ECB7B6-6D23-4D52-8430-11F0B34B4CB2}</Project>
-      <Name>Peach.Recipes.Query.MongoDB</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Peach.Recipes.Query\Peach.Recipes.Query.csproj">
-      <Project>{55A48DE0-3FB2-4CE0-873A-554DFE1B48B9}</Project>
-      <Name>Peach.Recipes.Query</Name>
+    <ProjectReference Include="..\Peach.Photos.Query\Peach.Photos.Query.csproj">
+      <Project>{EDE8A7F2-0711-4DA1-ADC8-EADD2520CAA9}</Project>
+      <Name>Peach.Photos.Query</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

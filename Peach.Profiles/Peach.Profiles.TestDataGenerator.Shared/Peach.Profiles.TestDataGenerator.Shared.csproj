@@ -48,6 +48,10 @@
       <Project>{054A30BA-B232-4FF1-9F23-1040D075764A}</Project>
       <Name>Xyperico.Base</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Peach.TestData.Shared\Peach.TestData.Shared.csproj">
+      <Project>{B6C2842E-A2F2-4263-9201-B9B745B87FAC}</Project>
+      <Name>Peach.TestData.Shared</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Peach.Profiles.Query\Peach.Profiles.Query.csproj">
       <Project>{D7201731-A3F8-4A3D-8C9B-BF165F8A1A01}</Project>
       <Name>Peach.Profiles.Query</Name>

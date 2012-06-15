@@ -2,6 +2,7 @@
 using Peach.Recipes.Query.Books;
 using Peach.Recipes.Query.Recipes;
 using Peach.Recipes.Query.Pages;
+using Peach.TestData.Shared;
 
 
 namespace Peach.Recipes.TestDataGenerator.Shared
@@ -19,7 +20,6 @@ namespace Peach.Recipes.TestDataGenerator.Shared
 
     #region Created stuff
 
-    Guid SimonProfileId = new Guid("692998CC-6732-4366-A8F9-441F8EA681B1");
 
     Recipe MexicanskeBurritosRecipe;
     Recipe BonneMosRecipe;
@@ -94,7 +94,8 @@ Serverer de varme wraps med salat, creme fraiche og salsa til.");
 
       Console.WriteLine("Add books");
 
-      Book b = new Book("mexikansk-mad", "Mexikansk mad", "En samling af mine yndlingsopskrifter fra Mexiko", SimonProfileId);
+      Book b = new Book("mexikansk-mad", "Mexikansk mad", "En samling af mine yndlingsopskrifter fra Mexiko", 
+                        TestDataConstants.Profiles.SimonProfileId);
       b.PublishedDate = DateTime.UtcNow;
 
       Page p1 = new TextPage("Velbekomme", 1, "Demo");

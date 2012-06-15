@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xyperico.Base", "..\..\Xype
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xyperico.Web.Mvc", "..\..\Xyperico\Source\Xyperico.Web\Xyperico.Web.Mvc\Xyperico.Web.Mvc\Xyperico.Web.Mvc.csproj", "{5BAC1705-410B-4B27-AA97-03C1EF567E1A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{FD61F793-EB39-4FD3-AB92-4442BD81C3EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,5 +48,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{054A30BA-B232-4FF1-9F23-1040D075764A} = {9B388232-F73C-4ED5-9147-67186D83C79C}
 		{5BAC1705-410B-4B27-AA97-03C1EF567E1A} = {9B388232-F73C-4ED5-9147-67186D83C79C}
+		{AA51967A-E052-4CFC-AAFC-B296EFF9A610} = {FD61F793-EB39-4FD3-AB92-4442BD81C3EC}
+		{9186A7E7-3241-473E-920A-84E2731072FA} = {FD61F793-EB39-4FD3-AB92-4442BD81C3EC}
 	EndGlobalSection
 EndGlobal

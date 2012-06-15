@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Peach.Profiles.Query.Profiles;
+using Peach.TestData.Shared;
 
 namespace Peach.Profiles.TestDataGenerator.Shared
 {
@@ -11,13 +12,6 @@ namespace Peach.Profiles.TestDataGenerator.Shared
     #region Dependencies
 
     public IProfileRepository ProfileRepository { get; set; }
-
-    #endregion
-
-
-    #region Created stuff
-
-    Guid SimonProfileId = new Guid("692998CC-6732-4366-A8F9-441F8EA681B1");
 
     #endregion
 
@@ -36,10 +30,12 @@ namespace Peach.Profiles.TestDataGenerator.Shared
 
       Console.WriteLine("Add Profiles");
 
-      Profile p1 = new Profile("simon", "Simon", "The cook", SimonProfileId);
+      Profile p1 = new Profile("simon", "Simon Superion", "The cook",
+                               TestDataConstants.Profiles.SimonProfileId);
       ProfileRepository.Add(p1);
 
-      Profile p2 = new Profile("alice", "Alice", "The chef");
+      Profile p2 = new Profile("alice", "Alice Adelle Amundsen", "The chef",
+                               TestDataConstants.Profiles.AliceProfileId);
       ProfileRepository.Add(p2);
     }
 

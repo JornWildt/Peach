@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4DA274CE-4008-42BD-AE5F-8EE3F575BE69}</ProjectGuid>
+    <ProjectGuid>{0697187F-0C9F-470B-985E-44A12E0E85EC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Peach.Recipes.TestDataGenerator.Shared</RootNamespace>
-    <AssemblyName>Peach.Recipes.TestDataGenerator.Shared</AssemblyName>
+    <RootNamespace>Peach.Photos.TestDataGenerator.Shared</RootNamespace>
+    <AssemblyName>Peach.Photos.TestDataGenerator.Shared</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -52,13 +52,9 @@
       <Project>{B6C2842E-A2F2-4263-9201-B9B745B87FAC}</Project>
       <Name>Peach.TestData.Shared</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Peach.Recipes.Query.MongoDB\Peach.Recipes.Query.MongoDB.csproj">
-      <Project>{D7ECB7B6-6D23-4D52-8430-11F0B34B4CB2}</Project>
-      <Name>Peach.Recipes.Query.MongoDB</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Peach.Recipes.Query\Peach.Recipes.Query.csproj">
-      <Project>{55A48DE0-3FB2-4CE0-873A-554DFE1B48B9}</Project>
-      <Name>Peach.Recipes.Query</Name>
+    <ProjectReference Include="..\Peach.Photos.Query\Peach.Photos.Query.csproj">
+      <Project>{EDE8A7F2-0711-4DA1-ADC8-EADD2520CAA9}</Project>
+      <Name>Peach.Photos.Query</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

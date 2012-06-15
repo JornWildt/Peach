@@ -1,4 +1,5 @@
 ﻿@model Peach.Recipes.Query.Recipes.RecipePage
+@using Peach.Photos.Web.Areas.Photos
 
 <h2>Ingredienser</h2>
 
@@ -16,3 +17,5 @@
 <h2>Fremgangsmåde</h2>
 
 <p>@Model.Recipe.Description</p>
+
+@Html.DisplayPhoto(new Guid("2F3F1F9A-4DE6-448F-8A88-5CB2559BFEE8"))

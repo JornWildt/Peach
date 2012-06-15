@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peach.Profiles.TestDataGene
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peach.Profiles.TestDataGenerator.Shared", "Peach.Profiles.TestDataGenerator.Shared\Peach.Profiles.TestDataGenerator.Shared.csproj", "{C0746960-36C5-46AF-8A1C-3638DB118FC6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peach.TestData.Shared", "..\Peach.TestData.Shared\Peach.TestData.Shared.csproj", "{B6C2842E-A2F2-4263-9201-B9B745B87FAC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -143,6 +145,16 @@ Global
 		{C0746960-36C5-46AF-8A1C-3638DB118FC6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{C0746960-36C5-46AF-8A1C-3638DB118FC6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{C0746960-36C5-46AF-8A1C-3638DB118FC6}.Release|x86.ActiveCfg = Release|Any CPU
+		{B6C2842E-A2F2-4263-9201-B9B745B87FAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6C2842E-A2F2-4263-9201-B9B745B87FAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6C2842E-A2F2-4263-9201-B9B745B87FAC}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B6C2842E-A2F2-4263-9201-B9B745B87FAC}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B6C2842E-A2F2-4263-9201-B9B745B87FAC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B6C2842E-A2F2-4263-9201-B9B745B87FAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6C2842E-A2F2-4263-9201-B9B745B87FAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6C2842E-A2F2-4263-9201-B9B745B87FAC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B6C2842E-A2F2-4263-9201-B9B745B87FAC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B6C2842E-A2F2-4263-9201-B9B745B87FAC}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

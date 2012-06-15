@@ -8,7 +8,7 @@ namespace Peach.Profiles.Web.Areas.Profiles
 {
   public static class DisplayExtensions
   {
-    public static MvcHtmlString DisplayProfile<T>(this HtmlHelper<T> html, Guid profileId)
+    public static MvcHtmlString DisplayProfileName<T>(this HtmlHelper<T> html, Guid profileId)
     {
       IProfileProvider ProfileProvider = Xyperico.Base.ObjectContainer.Container.Resolve<IProfileProvider>();
 

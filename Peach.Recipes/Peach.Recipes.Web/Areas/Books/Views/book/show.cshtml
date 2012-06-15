@@ -5,7 +5,7 @@
 }
 
 <h1>@Model.Book.Title</h1>
-<h3>@Html.DisplayProfile(@Model.Book.AuthorId)</h3>
+<h3>By: @Html.DisplayProfileName(@Model.Book.AuthorId)</h3>
 
 <h2>Introduktion</h2>
 <p>@Model.Book.Introduction</p>
@@ -20,4 +20,3 @@
   </li>
 }
 </ol>
-

@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4DA274CE-4008-42BD-AE5F-8EE3F575BE69}</ProjectGuid>
+    <ProjectGuid>{B6C2842E-A2F2-4263-9201-B9B745B87FAC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Peach.Recipes.TestDataGenerator.Shared</RootNamespace>
-    <AssemblyName>Peach.Recipes.TestDataGenerator.Shared</AssemblyName>
+    <RootNamespace>Peach.TestData.Shared</RootNamespace>
+    <AssemblyName>Peach.TestData.Shared</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,26 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TestDataConstants.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestDataBuilder.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Xyperico\Source\Xyperico.Base\Xyperico.Base\Xyperico.Base.csproj">
-      <Project>{054A30BA-B232-4FF1-9F23-1040D075764A}</Project>
-      <Name>Xyperico.Base</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Peach.TestData.Shared\Peach.TestData.Shared.csproj">
-      <Project>{B6C2842E-A2F2-4263-9201-B9B745B87FAC}</Project>
-      <Name>Peach.TestData.Shared</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Peach.Recipes.Query.MongoDB\Peach.Recipes.Query.MongoDB.csproj">
-      <Project>{D7ECB7B6-6D23-4D52-8430-11F0B34B4CB2}</Project>
-      <Name>Peach.Recipes.Query.MongoDB</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Peach.Recipes.Query\Peach.Recipes.Query.csproj">
-      <Project>{55A48DE0-3FB2-4CE0-873A-554DFE1B48B9}</Project>
-      <Name>Peach.Recipes.Query</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
