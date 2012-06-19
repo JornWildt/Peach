@@ -2,7 +2,10 @@
 Nu
 ===============================================================================
 
-Sitet er sgu lidt sløvt (mange .js-filer?)
+Styring af CSS filer pr. area
+
+Tekstfelter
+- HTML visning, markdown eller lign.
 
 Bog-indholdsfortegnelse
 - Layout (skabeloner)
@@ -10,7 +13,8 @@ Bog-indholdsfortegnelse
 
 Fotos (ny "Service")
 - Plugin til visning af foto via ID
-  - Forskellige skabeloner (1 stort, 1 stort + 2 små, ...)
+  - Forskellige størrelser (lille, medium, large)
+  - Forskellige formater (liggende, stående, kvadrat)
 
 Bog-forside
 - Vise
@@ -21,11 +25,7 @@ Bog-forside
 - Foto
 
 Bog-opskriftside
-- Visning af
-  - Sidenummer
-  - Kogebogsnavn (med link til forside)
-- Links til forrige/næste
-- Link til forside
+- Links til forrige/næste (mouse-over på kanterne)
 - Layout (skabeloner)
 - Foto
 
@@ -39,9 +39,6 @@ Kogebogseksempel
   - Nemme hverdagsretter
   - Hurtige desserter
 - Campingkogebogen
-
-Tekstfelter
-- HTML visning, markdown eller lign.
 
 Opskrifter-elementer
 - Navn

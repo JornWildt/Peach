@@ -7,6 +7,12 @@ namespace Peach.Recipes.Web.Areas.Recipes.Controllers
 {
   public class recipeController : Controller
   {
+    public static MvcHtmlString Text2Html(string text)
+    {
+      string s = text.Replace("\n", "<br/>");
+      return MvcHtmlString.Create(s);
+    }
+
     [HttpGet]
     public ActionResult show(string id) // id = key!
     {

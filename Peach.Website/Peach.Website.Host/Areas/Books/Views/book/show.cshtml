@@ -1,22 +1,33 @@
 ﻿@model Peach.Recipes.Web.Areas.Books.Models.BookViewModel
-@using Peach.Profiles.Web.Areas.Profiles
 @{
   ViewBag.Title = @Model.Book.Title;
 }
 
-<h1>@Model.Book.Title</h1>
-<h3>By: @Html.DisplayProfileName(@Model.Book.AuthorId)</h3>
+<div style="float: right; width: 45%">
+  <p>@Model.Book.Introduction</p>
 
-<h2>Introduktion</h2>
-<p>@Model.Book.Introduction</p>
+  <h2>Indhold</h2>
 
-<h2>Opskrifter</h2>
+  <ol>
+  @foreach (var page in Model.Pages)
+  {
+    <li>
+      <a href="@Url.RouteUrl("Books_Page", new { key = Model.Book.Key, page = page.PageNo })">@page.Title</a>
+    </li>
+  }
+  </ol>
+</div>
 
-<ol>
-@foreach (var page in Model.Pages)
-{
-  <li>
-    <a href="@Url.RouteUrl("Books_Page", new { key = Model.Book.Key, page = page.PageNo })">@page.Title</a>
-  </li>
-}
-</ol>
+<div style="float: left; width: 50%">
+  <div style="position: relative">
+    <img src="http://peach.dk/Photos/2f3f1f9a-4de6-448f-8a88-5cb2559bfee8" width="100%" style="position: absolute; z-index: -1"/>
+      <div id="caption" style="border: 1px solid black; background-color: White; top: 20px; position: relative; margin: 0 auto 0 auto; width: 60%; text-align: center">
+        <h1>@Model.Book.Title</h1>
+        <h3>@Html.DisplayProfileName(@Model.Book.AuthorId)</h3>
+      </div>
+  </div>
+</div>
+
+<script>
+  $('#caption').transify();
+</script>

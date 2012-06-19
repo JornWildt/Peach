@@ -1,21 +1,22 @@
 ﻿@model Peach.Recipes.Query.Recipes.RecipePage
-@using Peach.Photos.Web.Areas.Photos
 
-<h2>Ingredienser</h2>
+<div style="float: right; width: 45%">
+  <!--@Html.DisplayPhoto(new Guid("2F3F1F9A-4DE6-448F-8A88-5CB2559BFEE8"))-->
+  <img src="http://peach.dk/Photos/2f3f1f9a-4de6-448f-8a88-5cb2559bfee8" width="100%" />
+</div>
 
-<table>
-@foreach (var ingredient in Model.Recipe.Ingredients)
-{
-  <tr>
-    <td>@ingredient.Quantity</td>
-    <td>@ingredient.Unit</td>
-    <td>@ingredient.Title</td>
-  </tr>
-}
-</table>
+<div style="float: left; width: 50%">
+  <h1 style="text-align: right; font-size: 300%">@Model.Title</h1>
 
-<h2>Fremgangsmåde</h2>
+  <div style="float: left; width: 45%; text-align: right; margin-right: 2em; font-weight: bold">
+    @foreach (var ingredient in Model.Recipe.Ingredients)
+    {
+      <text>@ingredient.Quantity @ingredient.Unit @ingredient.Title</text><br/>
+    }
+  </div>
 
-<p>@Model.Recipe.Description</p>
+  <div style="float: left; width: 45%">
+    @Peach.Recipes.Web.Areas.Recipes.Controllers.recipeController.Text2Html(@Model.Recipe.Description)
+  </div>
+</div>
 
-@Html.DisplayPhoto(new Guid("2F3F1F9A-4DE6-448F-8A88-5CB2559BFEE8"))
